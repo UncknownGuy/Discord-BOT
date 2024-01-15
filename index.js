@@ -4,6 +4,7 @@ const uploader = require('./uploader');
 const { setupVerification } = require('./verify');
 const TelegramBot = require('node-telegram-bot-api');
 const { Client, GatewayIntentBits } = require('discord.js');
+const registerCommands = require('./register');
 
 const os = require('os');
 const express = require('express');
@@ -35,6 +36,11 @@ client.on('message', async (message) => {
   if (message.video) {
     await sendVideoToDiscord(message);
   }
+});
+
+client.once('ready', () => {
+  console.log(`Logged in as ${client.user.tag}`);
+  registerCommands(); // Call the function to register commands when the bot is ready
 });
 
 let statusMessageId; // Store the ID of the status message

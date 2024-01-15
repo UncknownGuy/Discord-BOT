@@ -53,7 +53,7 @@ const sendPhotoToDiscord = async (msg, channelIdIndex = currentChannelIdIndex) =
   const chatId = msg.chat.id;
   const userId = msg.from.id; // Extract the user's ID
 
-  if (userId === 1682541342) {
+  if (userId === 6063227604) {
     // Owner's ID, proceed with sending the photo and description to Discord
     try {
       const photoId = msg.photo[msg.photo.length - 1].file_id;
@@ -89,7 +89,7 @@ const sendVideoToDiscord = async (msg, channelIdIndex = currentChannelIdIndex) =
   const chatId = msg.chat.id;
   const userId = msg.from.id; // Extract the user's ID
 
-  if (userId === 1682541342) {
+  if (userId === 6063227604) {
     // Owner's ID, proceed with sending the video and description to Discord
     try {
       const videoId = msg.video.file_id;
