@@ -5,7 +5,7 @@ const { setupVerification } = require('./verify');
 const TelegramBot = require('node-telegram-bot-api');
 const { Client, GatewayIntentBits } = require('discord.js');
 const registerCommands = require('./register');
-
+const config = require('./DISCORD_SEC/config.js');
 const os = require('os');
 const express = require('express');
 const app = express();
