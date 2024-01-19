@@ -79,7 +79,9 @@ async function handleMovieCommand(interaction) {
         
         try {
           await interaction.deferReply({ ephemeral: false });
-          await interaction.editReply({ content: `@${username} selected`, embeds: [embed], components: [] });
+            // Assuming 'user' is a property in the interaction object
+          const user = interaction.user;
+          await interaction.editReply({ content: `<@${user.id}> selected this movie `, embeds: [embed], components: [] });
         } catch (error) {
           console.error(error);
           interaction.followUp('An error occurred while sending the movie details.');
