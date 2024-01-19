@@ -34,17 +34,12 @@ const reset = '\x1b[0m';
 
 bot.on('photo', async (msg) => {
   await sendPhotoToDiscord(msg);
-  console.log('');
-  console.log(`${pink}Img Uploaded To Discord ✅  |${reset}`);
-  console.log(`${pink}${green}----${pink}+++++++++++++++++++++${green}----${reset}`);
-  console.log('');
 });
 
 bot.on('video', async (msg) => {
   await sendVideoToDiscord(msg);
   console.log('');
-  console.log(`${pink}Vid Uploaded To Discord${reset}✅  |${reset}`);
-  console.log(`${pink}${green}----${pink}+++++++++++++++++++++${green}----${reset}`);
+  
   console.log('');
 });
 
@@ -57,6 +52,13 @@ const sendPhotoToDiscord = async (msg, channelIdIndex = currentChannelIdIndex) =
     // Owner's ID, proceed with sending the photo and description to Discord
     try {
       const photoId = msg.photo[msg.photo.length - 1].file_id;
+
+  const channelTitle = selectedChannel.title; // Get channel title
+      console.log('');
+      console.log(`${pink}Img Uploaded To Discord ${channelTitle}${reset}`);
+      console.log(`${pink}${green}----${pink}+++++++++++++++++++++${green}----${reset}`);
+      console.log('');
+      
       const file = await bot.getFile(photoId);
       const photoUrl = `https://api.telegram.org/file/bot${TELEGRAM_BOT_TOKEN}/${file.file_path}`;
       const description = msg.caption || ''; // Extract description from caption, if available
@@ -93,6 +95,11 @@ const sendVideoToDiscord = async (msg, channelIdIndex = currentChannelIdIndex) =
     // Owner's ID, proceed with sending the video and description to Discord
     try {
       const videoId = msg.video.file_id;
+        const channelTitle = selectedChannel.title; 
+      console.log('');
+      console.log(`${pink}Vid Uploaded To Discord ${channelTitle}${reset}  |${reset}`);
+  console.log(`${pink}${green}----${pink}+++++++++++++++++++++${green}----${reset}`);
+      console.log('');
       const file = await bot.getFile(videoId);
       const videoUrl = `https://api.telegram.org/file/bot${TELEGRAM_BOT_TOKEN}/${file.file_path}`;
       const description = msg.caption || ''; // Extract description from caption, if available
@@ -170,4 +177,4 @@ module.exports = {
   sendVideoToDiscord,
 };
 
-    
+  
