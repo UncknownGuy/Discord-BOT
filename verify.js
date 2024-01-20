@@ -1,4 +1,4 @@
-const imageUrl = 'https://telegra.ph/file/b1499b53ec5604042cae0.gif';
+const imageUrl = 'https://telegra.ph/file/29ac7e512d1316cb7b2da.gif';
 
 const createVerifyMessage = () => {
   return {
@@ -33,6 +33,7 @@ const createVerifyMessage = () => {
     ],
   };
 };
+
 
 const handleButtonInteractions = async (interaction, nsfwVerifyRoleId, destinationChannel) => {
   if (interaction.customId === 'getRoleButton') {
