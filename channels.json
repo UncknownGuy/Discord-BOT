@@ -1,21 +1,6 @@
 {
   "channels": [
-    {"id": "1191457743312265258", "title": "BIG AS"},
-    {"id": "1193712126368428143", "title": "BIG TIT"},
-    {"id": "1193712528031764580", "title": "BIG AS + BIG TIT"},
-    {"id": "1191458161727651960", "title": "OF"},
-    {"id": "1192457303111241748", "title": "IMAGES"},
-    {"id": "1193712830193602720", "title": "SMALL AS"},
-    {"id": "1193712741387612190", "title": "SMALL TIT"},
-    {"id": "1193712902503419975", "title": "BDM"},
-    {"id": "1193712987081560236", "title": "PH"},
-    {"id": "1194418940898709554", "title": "TIK TOK"},
-    {"id": "1194527669337997352", "title": "COSPLAY"},
-    {"id": "1193713085215670288", "title": "XHAM LIVE"},
-    {"id": "1194568949237551174", "title": "JAPAN CHINESE"},
-    {"id": "1195667236875157564", "title": "NSFW ART"},
-    {"id": "1194687604701024306", "title": "TEST CH"},
-    {"id": "1197731246478999702", "title": "ORN PICS"}
+    {"id": "CHANNEL_ID", "title": "CHANNEL_NAME"},
   ]
 }
 
