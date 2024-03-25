@@ -1,0 +1,5 @@
+{
+  "channels": [
+    {"id": "CHANNEL_ID", "title": "CHANNEL_NAME"},
+  ]
+}
